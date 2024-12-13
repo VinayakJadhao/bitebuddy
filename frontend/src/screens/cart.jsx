@@ -85,7 +85,7 @@ export default function Cart() {
           </div>
           <div>
             <button className='btn bg-success mt-5' onClick={handleCheckOut}>
-              Placed your Order
+              Placed your Order 
             </button>
           </div>
         </div>
