@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { useCart, useDispatchCart } from '../components/ContextReducer';
-import Delete from '@material-ui/icons/Delete';
-
+// import Delete from '@material-ui/icons/Delete';
+import { MdDelete } from "react-icons/md";
 
 export default function Cart() {
   const [showGif, setShowGif] = useState(false); // State for showing GIF
@@ -73,7 +73,7 @@ export default function Cart() {
                   <td>{food.price}</td>
                   <td>
                     <button type="button" className="btn p-0">
-                      <Delete onClick={() => { dispatch({ type: "REMOVE", index: index }) }} />
+                      <MdDelete onClick={() => { dispatch({ type: "REMOVE", index: index }) }} />
                     </button>
                   </td>
                 </tr>

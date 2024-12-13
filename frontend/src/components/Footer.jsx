@@ -11,7 +11,7 @@ export default function Footer() {
             <Link to="/" className="text-white text-decoration-none">
               <h4 className="fw-bold"> BiteBuddy</h4>
             </Link>
-            <p className="mt-2 text-white">
+            <p className="mt-2 text-white"> 
               Delicious food delivered at your doorstep.
             </p>
           </div>
@@ -20,7 +20,7 @@ export default function Footer() {
           <div className="col-md-6 mb-4">
             <h5 className="text-white">Why Choose Us?</h5>
             <p className="mt-2 text-white">
-              At BiteBuddy, we believe in bringing joy to every meal. With a
+              At BiteBuddy,  we believe in bringing joy to every meal. With a
               commitment to quality ingredients, exceptional service, and
               lightning-fast delivery, we transform your dining experience. 
               Savor the flavors of happiness with every bite!
