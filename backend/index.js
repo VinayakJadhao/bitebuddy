@@ -9,7 +9,7 @@ const port = 5000;
 mongoDB();
 app.use((req, res, next) => {
   // Make sure there is no extra space after the origin URL
-  res.setHeader("Access-Control-Allow-Origin", "http://localhost:5173");
+  res.setHeader("Access-Control-Allow-Origin", "https://bite-buddy-sepia.vercel.app");
 
   // Set other CORS headers for the request
   res.header(
