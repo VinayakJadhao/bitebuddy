@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+#carousel{
+  max-height: 500px;
+  object-fit: contain;
+  
+  
+
+}
+.text-center img  {
+  position: fixed; 
+  top: 50%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  margin: auto; 
+  z-index: 1000; 
+  display: block; 
+}
+.text-center p{
+  position: fixed; 
+  top: 67%; 
+  left: 50%; 
+  transform: translate(-50%, -50%); 
+  margin: auto; 
+  z-index: 1000; 
+  display: block; 
+
+}
+
+.my-4  custom-hr {
+  border-color: white !important;
+}
+
+.card {
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-header {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
+}
+
+.form-group label {
+  font-weight: bold;
+}
+
+.btn {
+  font-size: 16px;
+}
