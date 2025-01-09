@@ -10,12 +10,13 @@ export default function Signup() {
   });
   const [isLoading, setIsLoading] = useState(false); 
   let navigate = useNavigate();
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true); 
     try {
-      const response = await fetch("https://bitebuddy-gdw9.onrender.com/api/CreateUser", {
+      const response = await fetch(`${backendUrl}/api/CreateUser`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

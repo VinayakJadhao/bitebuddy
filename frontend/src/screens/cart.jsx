@@ -7,6 +7,7 @@ export default function Cart() {
   const [showGif, setShowGif] = useState(false); // State for showing GIF
   let data = useCart();
   let dispatch = useDispatchCart();
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
   if (data.length === 0) {
     return (
@@ -21,7 +22,7 @@ export default function Cart() {
   const handleCheckOut = async () => {
     let userEmail = localStorage.getItem("userEmail");
 
-    let response = await fetch("https://bitebuddy-gdw9.onrender.com/api/orderData", {
+    let response = await fetch(`${backendUrl}/api/orderData`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'

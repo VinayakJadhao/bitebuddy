@@ -8,12 +8,13 @@ export default function LogIn() {
   });
   const [loading, setLoading] = useState(false); 
   let navigate = useNavigate();
+  const backendUrl = import.meta.env.VITE_BACKEND_URL;
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true); 
     try {
-      const response = await fetch("https://bitebuddy-gdw9.onrender.com/api/LogInUser", {
+      const response = await fetch(`${backendUrl}/api/LogInUser`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

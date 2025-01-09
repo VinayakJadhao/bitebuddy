@@ -1,27 +1,27 @@
 const express = require("express");
 const mongoDB = require("./db");
 require('dotenv').config();
+const cors = require('cors');
 
 const app = express();
 const port = 5000;
+const FrontendURL = process.env.FRONTEND_URL;
 
 // Connect to MongoDB
 mongoDB();
-app.use((req, res, next) => {
-  // Make sure there is no extra space after the origin URL
-  res.setHeader("Access-Control-Allow-Origin", "https://bitebuddy-seven.vercel.app");
-
-  // Set other CORS headers for the request
+// Middleware CORS handling
+app.use((req,res,next)=>{
+  res.setHeader("Access-Control-Allow-Origin", FrontendURL);
   res.header(
     "Access-Control-Allow-Headers",
     "Origin, X-Requested-With, Content-Type, Accept"
   );
-
-  // Allow specific HTTP methods (optional)
-  res.header("Access-Control-Allow-Methods", "GET, POST, PUT, DELETE");
-
   next();
-});
+})
+
+app.use(cors());
+app.use(cors({ origin: FrontendURL, credentials: true }));
+app.use(express.json());
 
 
 // Define routes
